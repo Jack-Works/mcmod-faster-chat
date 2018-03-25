@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "fpslimiter",
+  "name": "Faster Chat",
+  "description": "Limit your fps to 5 while chat dialog is open.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Jack Works"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
