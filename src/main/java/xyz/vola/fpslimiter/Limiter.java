@@ -23,8 +23,6 @@ public class Limiter {
 
     private static Logger logger;
 
-    private static int lastFps = 60;
-
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -39,7 +37,6 @@ public class Limiter {
     public static void onLimitFPS(GuiOpenEvent event) {
         Gui gui = event.getGui();
         if (gui instanceof GuiChat || gui instanceof GuiNewChat) {
-            lastFps = mc.gameSettings.limitFramerate;
             ChangeFPS(5);
         }
     }
@@ -47,10 +44,7 @@ public class Limiter {
     @SubscribeEvent
     public static void onRestoreFPS(GuiOpenEvent event) {
         if (event.getGui() == null) {
-            if (lastFps < 30) {
-                lastFps = 60;
-            }
-            ChangeFPS(lastFps);
+            ChangeFPS(60);
         }
     }
 
